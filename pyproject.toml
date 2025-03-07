@@ -1,0 +1,26 @@
+[project]
+name = "linshare-ai-backend"
+version = "0.1.0"
+description = "AI backend for LinShare"
+authors = [
+    {name = "Haroune Hassine"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest (>=8.3.5,<9.0.0)",
+    "pylint (>=3.3.4,<4.0.0)"
+]
+
+
+[tool.poetry]
+packages = [
+    { include = "src/ai_backend"}
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+linshare_ai_backend = "src.ai_backend:main"
